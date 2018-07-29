@@ -20,7 +20,13 @@ public class SigninPage {
 	@FindBy(id = "passwd")
 	public WebElement password;
 	
-	@FindBy(id = "submitLogin")
+	@FindBy(id = "SubmitLogin")
 	public WebElement submitLogin;
+	
+	@FindBy(id = "create_account_error")
+	public WebElement errorMessage;
+	
+	@FindBy(xpath = "//li[.='Authentication failed.']")
+	public WebElement errorMessage_signIn;
 	
 }

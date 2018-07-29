@@ -6,11 +6,21 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(
-		tags="@smoke",
+
+		
+				@CucumberOptions(
+					    plugin = {
+					        "pretty",
+					        "html:target/default-cucumber-reports",
+					        "json:target/cucumber.json"
+					    
+					    },
+		
+		tags="@temp1",
 		features="src/test/resources/com/prestashop/features", 
 		glue="com/prestashop/step_definitions"
-//		dryRun = false
+		,monochrome=true
+		,dryRun = false
 		)
 public class CukesRunner {
 	
